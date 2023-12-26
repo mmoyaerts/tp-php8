@@ -1,0 +1,21 @@
+{# templates/products/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du Produit{% endblock %}
+
+{% block body %}
+    <h1>Détails du Produit</h1>
+
+    {% if product %}
+        <dl>
+            <dt>Nom :</dt>
+            <dd>{{ product.name }}</dd>
+
+            <dt>Prix :</dt>
+            <dd>{{ product.price }}</dd>
+        </dl>
+    {% else %}
+        <p>Produit non trouvé.</p>
+    {% endif %}
+{% endblock %}
